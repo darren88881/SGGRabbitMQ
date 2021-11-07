@@ -14,7 +14,7 @@ import java.util.concurrent.TimeoutException;
  */
 public class Producer {
 
-    public static void main(String [] args) throws IOException, TimeoutException {
+    public static void main(String[] args) throws IOException, TimeoutException {
 
         // 获取信道
         Channel channel = RabbitMQUtils.getChannel();
@@ -34,7 +34,7 @@ public class Producer {
          * 发送一个消息
          * 1.发送到那个交换机
          * 2.路由的 key 是哪个
-         * 3.其他的参数信息
+         * 3.支持消息路由头的其他属性等
          * 4.发送消息的消息体
          */
         channel.basicPublish("", RabbitMQUtils.QUEUE_NAME, null, message.getBytes());

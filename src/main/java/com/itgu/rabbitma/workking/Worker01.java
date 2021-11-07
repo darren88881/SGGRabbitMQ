@@ -1,31 +1,33 @@
-package com.itgu.rabbitma.simple;
+package com.itgu.rabbitma.workking;
 
 import com.itgu.rabbitmq.util.RabbitMQUtils;
 import com.rabbitmq.client.CancelCallback;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DeliverCallback;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 /**
  * @author darren
- * @create 2021-11-06 17:51
+ * @create 2021-11-07 9:43
  */
-public class Consumer {
-    
-    public static void main(String [] args) throws IOException, TimeoutException {
+public class Worker01 {
+    private static Logger logger = LoggerFactory.getLogger(Worker01.class);
+
+    public static void main(String[] args) throws IOException, TimeoutException {
+        logger.info("Worker01 start accept message... ");
         Channel channel = RabbitMQUtils.getChannel();
 
-        System.out.println("等待接收消息");
-        //推送的消息如何进行消费的接口回调
-        DeliverCallback deliverCallback = (consumerTag, message) ->{
-            System.out.println(new String(message.getBody()));
-            RabbitMQUtils.closeChannel();
+        DeliverCallback deliverCallback = (consumerTag, message) -> {
+            String messageStr = new String(message.getBody());
+            logger.info("Worker01 accept message is messageStr:{}", messageStr);
         };
 
         CancelCallback cancelCallback = (consumerTag) -> {
-            System.out.println(consumerTag + "消息被中断");
+            logger.info("Worker01 fail message is consumerTag:{}", consumerTag);
         };
 
         /**
@@ -36,7 +38,5 @@ public class Consumer {
          * 4.消费者未成功消费的回调
          */
         channel.basicConsume(RabbitMQUtils.QUEUE_NAME, true, deliverCallback, cancelCallback);
-
-
     }
 }
