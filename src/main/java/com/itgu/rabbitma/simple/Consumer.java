@@ -1,4 +1,4 @@
-package com.itgu.rabbitma.working;
+package com.itgu.rabbitma.simple;
 
 import com.itgu.rabbitmq.util.RabbitMQUtils;
 import com.rabbitmq.client.CancelCallback;
