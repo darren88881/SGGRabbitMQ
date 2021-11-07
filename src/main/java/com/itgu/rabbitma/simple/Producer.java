@@ -1,6 +1,6 @@
 package com.itgu.rabbitma.simple;
 
-import com.itgu.rabbitmq.util.RabbitMQUtils;
+import com.itgu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.Channel;
 
 import java.io.IOException;
@@ -17,7 +17,7 @@ public class Producer {
     public static void main(String[] args) throws IOException, TimeoutException {
 
         // 获取信道
-        Channel channel = RabbitMQUtils.getChannel();
+        Channel channel = RabbitmqUtils.getChannel();
 
         /**
          * 生成一个队列
@@ -27,7 +27,7 @@ public class Producer {
          * 4.是否自动删除 最后一个消费者端开连接以后 该队列是否自动删除 true 自动删除
          * 5.其他参数
          */
-        channel.queueDeclare(RabbitMQUtils.QUEUE_NAME, false, false, false, null);
+        channel.queueDeclare(RabbitmqUtils.QUEUE_NAME, false, false, false, null);
 
         String message = "hello world";
         /**
@@ -37,11 +37,11 @@ public class Producer {
          * 3.支持消息路由头的其他属性等
          * 4.发送消息的消息体
          */
-        channel.basicPublish("", RabbitMQUtils.QUEUE_NAME, null, message.getBytes());
+        channel.basicPublish("", RabbitmqUtils.QUEUE_NAME, null, message.getBytes());
 
         System.out.println("消息发送中。。。。");
 
-        RabbitMQUtils.closeChannel();
+        RabbitmqUtils.closeChannel();
 
 
     }

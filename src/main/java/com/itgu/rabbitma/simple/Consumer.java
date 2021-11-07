@@ -1,6 +1,6 @@
 package com.itgu.rabbitma.simple;
 
-import com.itgu.rabbitmq.util.RabbitMQUtils;
+import com.itgu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.CancelCallback;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DeliverCallback;
@@ -15,13 +15,13 @@ import java.util.concurrent.TimeoutException;
 public class Consumer {
     
     public static void main(String [] args) throws IOException, TimeoutException {
-        Channel channel = RabbitMQUtils.getChannel();
+        Channel channel = RabbitmqUtils.getChannel();
 
         System.out.println("等待接收消息");
         //推送的消息如何进行消费的接口回调
         DeliverCallback deliverCallback = (consumerTag, message) ->{
             System.out.println(new String(message.getBody()));
-            RabbitMQUtils.closeChannel();
+            RabbitmqUtils.closeChannel();
         };
 
         CancelCallback cancelCallback = (consumerTag) -> {
@@ -35,7 +35,7 @@ public class Consumer {
          * 3.消费者成功消费回的调
          * 4.消费者未成功消费的回调
          */
-        channel.basicConsume(RabbitMQUtils.QUEUE_NAME, true, deliverCallback, cancelCallback);
+        channel.basicConsume(RabbitmqUtils.QUEUE_NAME, true, deliverCallback, cancelCallback);
 
 
     }

@@ -13,8 +13,8 @@ import java.util.concurrent.TimeoutException;
  * @author darren
  * @create 2021-11-06 17:48
  */
-public class RabbitMQUtils {
-    private static Logger logger = LoggerFactory.getLogger(RabbitMQUtils.class);
+public class RabbitmqUtils {
+    private static Logger logger = LoggerFactory.getLogger(RabbitmqUtils.class);
     public static String  QUEUE_NAME = "hello";
     public static Connection connection;
     public static Channel channel;
@@ -48,16 +48,5 @@ public class RabbitMQUtils {
             logger.error("closeChannel IOException error!", e);
         }
         logger.info("closeChannel success!");
-    }
-
-    /**
-     * 输入消息关闭
-     *
-     * @param message
-     */
-    public static void inputMessageClose(String message) {
-        if ("close".equals(message)) {
-            RabbitMQUtils.closeChannel();
-        }
     }
 }

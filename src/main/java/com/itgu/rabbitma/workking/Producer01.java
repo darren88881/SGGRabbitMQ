@@ -1,6 +1,6 @@
 package com.itgu.rabbitma.workking;
 
-import com.itgu.rabbitmq.util.RabbitMQUtils;
+import com.itgu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.Channel;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,9 +18,9 @@ public class Producer01 {
 
     public static void main(String[] args) throws IOException, TimeoutException {
         logger.info("Producer send message begin...");
-        Channel channel = RabbitMQUtils.getChannel();
+        Channel channel = RabbitmqUtils.getChannel();
 
-        channel.queueDeclare(RabbitMQUtils.QUEUE_NAME, false, false, false, null);
+        channel.queueDeclare(RabbitmqUtils.QUEUE_NAME, false, false, false, null);
 
         Scanner scanner = new Scanner(System.in);
 
@@ -35,7 +35,7 @@ public class Producer01 {
              * 3.支持消息路由头的其他属性等
              * 4.发送消息的消息体
              */
-            channel.basicPublish("", RabbitMQUtils.QUEUE_NAME, null, message.getBytes());
+            channel.basicPublish("", RabbitmqUtils.QUEUE_NAME, null, message.getBytes());
             logger.info("Producer send message:{} success...", message);
         }
     }

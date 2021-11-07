@@ -1,6 +1,6 @@
 package com.itgu.rabbitma.workking;
 
-import com.itgu.rabbitmq.util.RabbitMQUtils;
+import com.itgu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.CancelCallback;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DeliverCallback;
@@ -20,7 +20,7 @@ public class Worker02 {
 
     public static void main(String[] args) throws IOException, TimeoutException {
         logger.info("Worker02 start accept message... ");
-        Channel channel = RabbitMQUtils.getChannel();
+        Channel channel = RabbitmqUtils.getChannel();
 
         DeliverCallback deliverCallback = (consumerTag, message) -> {
             String messageStr = new String(message.getBody());
@@ -38,6 +38,6 @@ public class Worker02 {
          * 3.消费者成功消费回的调
          * 4.消费者未成功消费的回调
          */
-        channel.basicConsume(RabbitMQUtils.QUEUE_NAME, true, deliverCallback, cancelCallback);
+        channel.basicConsume(RabbitmqUtils.QUEUE_NAME, true, deliverCallback, cancelCallback);
     }
 }
