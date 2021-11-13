@@ -22,10 +22,14 @@ public class Worker02 {
     public static void main(String[] args) throws IOException, TimeoutException {
         logger.info("Worker02 start accept message... ");
         Channel channel = RabbitmqUtils.getChannel();
+        // 设置不公平分发
+        channel.basicQos(1);
 
         DeliverCallback deliverCallback = (consumerTag, message) -> {
             String messageStr = new String(message.getBody());
-            ThreadUtils.sleep(30);
+            ThreadUtils.sleep(5);
+
+            // 手动应答
             channel.basicAck(message.getEnvelope().getDeliveryTag(),false);
             logger.info("Worker02 accept message is messageStr:{}", messageStr);
         };
