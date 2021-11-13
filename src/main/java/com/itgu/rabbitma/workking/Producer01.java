@@ -2,6 +2,7 @@ package com.itgu.rabbitma.workking;
 
 import com.itgu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.Channel;
+import com.rabbitmq.client.MessageProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -22,7 +23,7 @@ public class Producer01 {
         logger.info("Producer send message begin...");
         Channel channel = RabbitmqUtils.getChannel();
 
-        channel.queueDeclare(RabbitmqUtils.QUEUE_NAME, false, false, false, null);
+        channel.queueDeclare(RabbitmqUtils.QUEUE_NAME, RabbitmqUtils.DURABLE, false, false, null);
 
         Scanner scanner = new Scanner(System.in);
 
@@ -35,8 +36,11 @@ public class Producer01 {
              * 2.路由的 key 是哪个
              * 3.支持消息路由头的其他属性等
              * 4.发送消息的消息体
+             * MessageProperties.PERSISTENT_TEXT_PLAIN 消息持久化
+             *
              */
-            channel.basicPublish("", RabbitmqUtils.QUEUE_NAME, null, message.getBytes());
+            channel.basicPublish("", RabbitmqUtils.QUEUE_NAME,
+                    MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes());
             logger.info("Producer send message:{} success...", message);
         }
     }
