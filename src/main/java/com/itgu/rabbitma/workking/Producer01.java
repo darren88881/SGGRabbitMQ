@@ -24,7 +24,6 @@ public class Producer01 {
 
         Scanner scanner = new Scanner(System.in);
 
-        logger.info("请输入发送的消息，输入close 结束发送：");
         while (scanner.hasNext()) {
             String message = scanner.next();
 

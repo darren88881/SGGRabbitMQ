@@ -11,6 +11,8 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 /**
+ * 工作模式消费者1
+ *
  * @author darren
  * @create 2021-11-07 9:43
  */
@@ -23,6 +25,11 @@ public class Worker01 {
 
         DeliverCallback deliverCallback = (consumerTag, message) -> {
             String messageStr = new String(message.getBody());
+            /**
+             * 1.消息标记tag
+             * 2.是否批量应答未应答的消息
+             */
+            channel.basicAck(message.getEnvelope().getDeliveryTag(),false);
             logger.info("Worker01 accept message is messageStr:{}", messageStr);
         };
 
@@ -37,6 +44,6 @@ public class Worker01 {
          * 3.消费者成功消费回的调
          * 4.消费者未成功消费的回调
          */
-        channel.basicConsume(RabbitmqUtils.QUEUE_NAME, true, deliverCallback, cancelCallback);
+        channel.basicConsume(RabbitmqUtils.QUEUE_NAME, false, deliverCallback, cancelCallback);
     }
 }
