@@ -16,7 +16,10 @@ import java.util.concurrent.TimeoutException;
 public class RabbitmqUtils {
     private static Logger logger = LoggerFactory.getLogger(RabbitmqUtils.class);
     public static String QUEUE_NAME = "hello";
-    // 队列持久化
+    public static Integer MESSAGE_NUM = 1000;
+    /**
+     * 队列持久化
+     */
     public static boolean DURABLE = true;
     public static Connection connection;
     public static Channel channel;
