@@ -1,5 +1,6 @@
 package com.itgu.rabbitmq.util;
 
+import com.rabbitmq.client.BuiltinExchangeType;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.Connection;
 import com.rabbitmq.client.ConnectionFactory;
@@ -15,6 +16,7 @@ import java.util.concurrent.TimeoutException;
  */
 public class RabbitmqUtils {
     private static Logger logger = LoggerFactory.getLogger(RabbitmqUtils.class);
+    public static String EXCHANGE_NAME = "fanout_exchange";
     public static String QUEUE_NAME = "hello";
     public static Integer MESSAGE_NUM = 1000;
     /**
@@ -53,5 +55,18 @@ public class RabbitmqUtils {
             logger.error("closeChannel IOException error!", e);
         }
         logger.info("closeChannel success!");
+    }
+
+    /**
+     * 获取扇出的交换机
+     *
+     * @return
+     * @throws IOException
+     * @throws TimeoutException
+     */
+    public static Channel getFanOutExchangeChannel() throws IOException, TimeoutException {
+        Channel channel = getChannel();
+        channel.exchangeDeclare(RabbitmqUtils.EXCHANGE_NAME, BuiltinExchangeType.FANOUT);
+        return channel;
     }
 }
