@@ -15,16 +15,16 @@ import java.util.concurrent.TimeoutException;
  * @create 2021-11-06 17:48
  */
 public class RabbitmqUtils {
-    private static Logger logger = LoggerFactory.getLogger(RabbitmqUtils.class);
-    public static String EXCHANGE_NAME = "fanout_exchange";
-    public static String QUEUE_NAME = "hello";
-    public static Integer MESSAGE_NUM = 1000;
+    private static Logger   logger          = LoggerFactory.getLogger(RabbitmqUtils.class);
+    public  static String   EXCHANGE_NAME   = "fanout_exchange";
+    public  static String   QUEUE_NAME      = "hello";
+    public  static Integer  MESSAGE_NUM     = 1000;
     /**
      * 队列持久化
      */
-    public static boolean DURABLE = true;
+    public static boolean   DURABLE = true;
     public static Connection connection;
-    public static Channel channel;
+    public static Channel   channel;
 
     public static Channel getChannel() throws IOException, TimeoutException {
         logger.info("getChannel begin...");
@@ -65,7 +65,7 @@ public class RabbitmqUtils {
      * @throws TimeoutException
      */
     public static Channel getFanOutExchangeChannel() throws IOException, TimeoutException {
-        Channel channel = getChannel();
+        Channel channel = RabbitmqUtils.getChannel();
         channel.exchangeDeclare(RabbitmqUtils.EXCHANGE_NAME, BuiltinExchangeType.FANOUT);
         return channel;
     }
