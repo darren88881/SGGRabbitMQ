@@ -23,15 +23,22 @@ public class ReleaseConfirmation {
 
     public static void main(String [] args) throws InterruptedException, TimeoutException, IOException {
         // 单个发布确认模式:发布1000个消息耗时：555ms
-        // publishMessageIndividual();
+        publishMessageIndividual();
         // 批量发布确认模式:发布1000个消息耗时：66ms
         // publishMessageBatch();
         // 异步发布确认模式:发布1000个消息耗时：28ms
-        publishMessageAync();
+        // publishMessageAync();
 
 
     }
 
+    /**
+     * 单个发布确认模式:发布1000个消息耗时：555ms
+     *
+     * @throws IOException
+     * @throws TimeoutException
+     * @throws InterruptedException
+     */
     public static void publishMessageIndividual() throws IOException, TimeoutException, InterruptedException {
         Channel channel = RabbitmqUtils.getChannel();
         // 因为队列经过持久化后该队列存在所以再次创建后报错，直接使用已存在的队列即可
@@ -56,7 +63,11 @@ public class ReleaseConfirmation {
     }
 
     /**
-     * 批量发布确认模式
+     * 批量发布确认模式:发布1000个消息耗时：66ms
+     *
+     * @throws IOException
+     * @throws TimeoutException
+     * @throws InterruptedException
      */
     public static void publishMessageBatch() throws IOException, TimeoutException, InterruptedException {
         Channel channel = RabbitmqUtils.getChannel();
@@ -79,7 +90,11 @@ public class ReleaseConfirmation {
     }
 
     /**
-     * 异步发布确认模式
+     * 异步发布确认模式:发布1000个消息耗时：28ms
+     *
+     * @throws IOException
+     * @throws TimeoutException
+     * @throws InterruptedException
      */
     public static void publishMessageAync() throws IOException, TimeoutException, InterruptedException {
         Channel channel = RabbitmqUtils.getChannel();
@@ -89,6 +104,7 @@ public class ReleaseConfirmation {
         ConcurrentSkipListMap<Long, String> skipListMap = new ConcurrentSkipListMap<>();
 
         long begin = System.currentTimeMillis();
+
         /**
          * 成功消息
          * deliveryTag： 消息编号
