@@ -1,6 +1,6 @@
-package com.itgu.rabbitma.confirmation;
+package com.itguigu.rabbitmq.confirmation;
 
-import com.itgu.rabbitmq.util.RabbitmqUtils;
+import com.itguigu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.ConfirmCallback;
 import org.slf4j.Logger;

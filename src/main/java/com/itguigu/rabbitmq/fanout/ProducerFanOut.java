@@ -1,6 +1,6 @@
-package com.itgu.rabbitma.fanout;
+package com.itguigu.rabbitmq.fanout;
 
-import com.itgu.rabbitmq.util.RabbitmqUtils;
+import com.itguigu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.MessageProperties;
 import org.slf4j.Logger;

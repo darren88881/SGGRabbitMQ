@@ -1,7 +1,6 @@
-package com.itgu.rabbitma.workking;
+package com.itguigu.rabbitmq.workking;
 
-import com.itgu.rabbitmq.util.RabbitmqUtils;
-import com.itgu.rabbitmq.util.ThreadUtils;
+import com.itguigu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.CancelCallback;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DeliverCallback;
@@ -12,34 +11,35 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 /**
+ * 工作模式消费者1
+ *
  * @author darren
  * @create 2021-11-07 9:43
  */
-public class Worker02 {
-
-    private static Logger logger = LoggerFactory.getLogger(Worker02.class);
+public class Worker01 {
+    private static Logger logger = LoggerFactory.getLogger(Worker01.class);
 
     public static void main(String[] args) throws IOException, TimeoutException {
-        logger.info("Worker02 start accept message... ");
+        logger.info("Worker01 start accept message... ");
         Channel channel = RabbitmqUtils.getChannel();
-        // 设置不公平分发
-        channel.basicQos(1);
 
         DeliverCallback deliverCallback = (consumerTag, message) -> {
             String messageStr = new String(message.getBody());
-            ThreadUtils.sleep(5);
-
-            // 手动应答
+            /**
+             * 1.消息标记tag
+             * 2.是否批量应答未应答的消息
+             */
             channel.basicAck(message.getEnvelope().getDeliveryTag(),false);
-            logger.info("Worker02 accept message is messageStr:{}", messageStr);
+            logger.info("Worker01 accept message is messageStr:{}", messageStr);
         };
 
         CancelCallback cancelCallback = (consumerTag) -> {
-            logger.info("Worker02 fail message is consumerTag:{}", consumerTag);
+            logger.info("Worker01 fail message is consumerTag:{}", consumerTag);
         };
 
         /**
          * 消费者消费消息
+         *
          * 1.消费哪个队列
          * 2.消费成功之后是否要自动应答 true 代表自动应答 false 手动应答
          * 3.消费者成功消费回的调

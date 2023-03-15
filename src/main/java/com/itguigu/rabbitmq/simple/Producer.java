@@ -1,6 +1,6 @@
-package com.itgu.rabbitma.simple;
+package com.itguigu.rabbitmq.simple;
 
-import com.itgu.rabbitmq.util.RabbitmqUtils;
+import com.itguigu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.Channel;
 
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package com.itgu.rabbitmq.util;
+package com.itguigu.rabbitmq.util;
 
 /**
  * @author darren
