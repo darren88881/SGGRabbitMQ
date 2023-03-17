@@ -23,8 +23,8 @@ public class Worker01 {
         logger.info("Worker01 start accept message... ");
         Channel channel = RabbitmqUtils.getChannel();
 
-        // 设置不公平分发
-        channel.basicQos(1);
+        // 设置不公平分发或预取值。0为公平分发，1为不公平分发，大于1为预取值
+        channel.basicQos(2);
 
         DeliverCallback deliverCallback = (consumerTag, message) -> {
             String messageStr = new String(message.getBody());

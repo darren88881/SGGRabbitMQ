@@ -6,8 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="037a1667-838c-4833-a368-6f576bb5602f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Producer01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Producer01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Worker01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Worker01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Worker02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Worker02.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +116,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Producer01">
+  <component name="RunManager" selected="Application.Worker02">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.simple.Consumer" />
       <module name="SGGRabbitMQ" />
@@ -354,8 +354,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Producer01" />
         <item itemvalue="Application.Worker02" />
+        <item itemvalue="Application.Producer01" />
         <item itemvalue="Application.Worker01" />
         <item itemvalue="Application.Consumer" />
         <item itemvalue="Application.Producer" />
@@ -405,7 +405,7 @@
       <workItem from="1678878358501" duration="2705000" />
       <workItem from="1678881109900" duration="682000" />
       <workItem from="1678933022167" duration="1210000" />
-      <workItem from="1679028663275" duration="3294000" />
+      <workItem from="1679028663275" duration="4983000" />
     </task>
     <task id="LOCAL-00001" summary="新搭的环境提交试试">
       <created>1647078933243</created>
@@ -435,7 +435,14 @@
       <option name="project" value="LOCAL" />
       <updated>1678881135720</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="30-不公平分发">
+      <created>1679032118352</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1679032118352</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -518,7 +525,8 @@
     <MESSAGE value="添加注释" />
     <MESSAGE value="格式化注释" />
     <MESSAGE value="修改目录" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改目录" />
+    <MESSAGE value="30-不公平分发" />
+    <option name="LAST_COMMIT_MESSAGE" value="30-不公平分发" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/com/itgu/AppTest.java">
