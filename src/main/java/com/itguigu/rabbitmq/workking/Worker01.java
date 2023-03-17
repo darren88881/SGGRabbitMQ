@@ -23,6 +23,9 @@ public class Worker01 {
         logger.info("Worker01 start accept message... ");
         Channel channel = RabbitmqUtils.getChannel();
 
+        // 设置不公平分发
+        channel.basicQos(1);
+
         DeliverCallback deliverCallback = (consumerTag, message) -> {
             String messageStr = new String(message.getBody());
             /**

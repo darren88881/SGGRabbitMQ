@@ -11,7 +11,7 @@ import java.util.Scanner;
 import java.util.concurrent.TimeoutException;
 
 /**
- * 生产者
+ * 生产者:完成消息手动应答
  *
  * @author darren
  * @create 2021-11-07 9:42

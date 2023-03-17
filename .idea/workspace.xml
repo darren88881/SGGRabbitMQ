@@ -4,29 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="037a1667-838c-4833-a368-6f576bb5602f" name="Default Changelist" comment="格式化注释">
-      <change afterPath="$PROJECT_DIR$/.idea/ant.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/intellij-javadocs-4.0.1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logback.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/logback.xsd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/itgu/AppTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itgu/rabbitma/confirmation/ReleaseConfirmation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/confirmation/ReleaseConfirmation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itgu/rabbitma/fanout/FanOutConsumer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/fanout/FanOutConsumer1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itgu/rabbitma/fanout/FanOutConsumer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/fanout/FanOutConsumer2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itgu/rabbitma/fanout/ProducerFanOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/fanout/ProducerFanOut.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itgu/rabbitma/simple/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/simple/Consumer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itgu/rabbitma/simple/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/simple/Producer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itgu/rabbitma/workking/Producer01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Producer01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itgu/rabbitma/workking/Worker01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Worker01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itgu/rabbitma/workking/Worker02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Worker02.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itgu/rabbitmq/util/RabbitmqUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/util/RabbitmqUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itgu/rabbitmq/util/ThreadUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/util/ThreadUtils.java" afterDir="false" />
+    <list default="true" id="037a1667-838c-4833-a368-6f576bb5602f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Producer01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Producer01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Worker01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Worker01.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,21 +102,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "E:/IDEA-Tomcat-8/apache-tomcat-8.0.47/webapps/ROOT",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/IDEA-workspace-darren/SGG-SpringCloud&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Tomcat Server.Tomcat8">
+}</component>
+  <component name="RunManager" selected="Application.Producer01">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.simple.Consumer" />
       <module name="SGGRabbitMQ" />
@@ -155,6 +136,45 @@
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.itguigu.rabbitmq.simple.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Producer01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.workking.Producer01" />
+      <module name="SGGRabbitMQ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itguigu.rabbitmq.workking.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Worker01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.workking.Worker01" />
+      <module name="SGGRabbitMQ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itguigu.rabbitmq.workking.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Worker02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.workking.Worker02" />
+      <module name="SGGRabbitMQ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itguigu.rabbitmq.workking.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -325,12 +345,18 @@
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.Producer01" />
+      <item itemvalue="Application.Worker01" />
+      <item itemvalue="Application.Worker02" />
       <item itemvalue="Application.Consumer" />
       <item itemvalue="Application.Producer" />
       <item itemvalue="Tomcat Server.Tomcat8" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Producer01" />
+        <item itemvalue="Application.Worker02" />
+        <item itemvalue="Application.Worker01" />
         <item itemvalue="Application.Consumer" />
         <item itemvalue="Application.Producer" />
       </list>
@@ -377,6 +403,9 @@
       <workItem from="1677920635850" duration="447000" />
       <workItem from="1678871378381" duration="2097000" />
       <workItem from="1678878358501" duration="2705000" />
+      <workItem from="1678881109900" duration="682000" />
+      <workItem from="1678933022167" duration="1210000" />
+      <workItem from="1679028663275" duration="3294000" />
     </task>
     <task id="LOCAL-00001" summary="新搭的环境提交试试">
       <created>1647078933243</created>
@@ -399,7 +428,14 @@
       <option name="project" value="LOCAL" />
       <updated>1649561377727</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="修改目录">
+      <created>1678881135720</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678881135720</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -481,7 +517,8 @@
     <MESSAGE value="新搭的环境提交试试" />
     <MESSAGE value="添加注释" />
     <MESSAGE value="格式化注释" />
-    <option name="LAST_COMMIT_MESSAGE" value="格式化注释" />
+    <MESSAGE value="修改目录" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改目录" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/com/itgu/AppTest.java">
