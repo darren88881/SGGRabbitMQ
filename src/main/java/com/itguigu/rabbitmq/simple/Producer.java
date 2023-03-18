@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 /**
- * 简单模式
+ * 简单模式-生产者
  *
  * @author darren
  * @create 2021-11-06 17:13

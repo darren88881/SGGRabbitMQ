@@ -11,6 +11,7 @@ import java.io.IOException;
 import java.util.concurrent.TimeoutException;
 
 /**
+ * 简单模式-消费者-并自动应答
  * @author darren
  * @create 2021-11-06 17:51
  */
