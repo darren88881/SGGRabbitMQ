@@ -11,10 +11,10 @@ import java.util.Scanner;
 import java.util.concurrent.TimeoutException;
 
 /**
- * 工作队列模式（一对多，互相抢夺消息）
+ * 工作模式
+ * working:一人发谁抢到谁收
  *
  * 生产者:完成消息手动应答
- *
  * @author darren
  * @create 2021-11-07 9:42
  */

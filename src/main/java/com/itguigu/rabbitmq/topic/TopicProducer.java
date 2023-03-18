@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.util.HashMap;
 
 /**
+ * 主题模式
+ * topic:一人发谁匹配谁收
  *
  * @Author darren
  * @Date 2023/3/18 16:13

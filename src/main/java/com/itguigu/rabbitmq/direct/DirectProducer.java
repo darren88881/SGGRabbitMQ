@@ -11,9 +11,10 @@ import java.util.Scanner;
 import java.util.concurrent.TimeoutException;
 
 /**
- * 直接模式生产者
- * 类似于指定谁收谁就收
+ * 直接模式
+ * direct:一人发指定谁收谁就收
  *
+ * 生产者
  * @author darren
  * @create 2021-11-15 21:21
  */

@@ -11,8 +11,8 @@ import java.util.Scanner;
 import java.util.concurrent.TimeoutException;
 
 /**
- * 扇出模式生产者
- * 类似于群消息，一人发多人收
+ * 扇出模式
+ * fanout:一人发多人收
  *
  * @author darren
  * @create 2021-11-15 21:21
