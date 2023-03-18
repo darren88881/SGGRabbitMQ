@@ -191,9 +191,30 @@ public class RabbitmqUtils {
      * @return
      */
     public static Channel createTopicExchangeChannel() throws IOException {
+        // 删除交换机
         channel.exchangeDelete(RabbitmqUtils.TOPIC_EXCHANGE_NAME);
-
+        // 创建交换机
         channel.exchangeDeclare(RabbitmqUtils.TOPIC_EXCHANGE_NAME, BuiltinExchangeType.TOPIC, true);
+
+        // 创建队列1
+        channel.queueDeclare(RabbitmqUtils.TOPIC_EXCHANGE_QUEUE_NAME1,
+                true, false,false,null);
+        // 绑定队列1并设置routingKey
+        channel.queueBind(
+                RabbitmqUtils.TOPIC_EXCHANGE_QUEUE_NAME1,
+                RabbitmqUtils.TOPIC_EXCHANGE_NAME, "*.orange.*");
+
+        // 创建队列2
+        channel.queueDeclare(RabbitmqUtils.TOPIC_EXCHANGE_QUEUE_NAME2,
+                true, false,false,null);
+        // 绑定队列2到交换机上并设置routingKey
+        channel.queueBind(
+                RabbitmqUtils.TOPIC_EXCHANGE_QUEUE_NAME2,
+                RabbitmqUtils.TOPIC_EXCHANGE_NAME, "*.*.rabbit");
+        // 绑定队列2到交换机上并设置routingKey
+        channel.queueBind(
+                RabbitmqUtils.TOPIC_EXCHANGE_QUEUE_NAME2,
+                RabbitmqUtils.TOPIC_EXCHANGE_NAME, "lazy.#");
         logger.info("创建主题交换机成功");
         return channel;
     }

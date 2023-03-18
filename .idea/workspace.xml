@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="037a1667-838c-4833-a368-6f576bb5602f" name="Default Changelist" comment="" />
+    <list default="true" id="037a1667-838c-4833-a368-6f576bb5602f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/topic/TopicConsumer1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/topic/TopicConsumer2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/topic/TopicProducer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/itguigu/StreamMap.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/util/RabbitmqUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/util/RabbitmqUtils.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -124,20 +131,7 @@
       <recent name="E:\IDEA-workspace-darren\SGGRabbitMQ\src\main\java\com\itguigu\rabbitmq\direct" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DirectConsumer2">
-    <configuration name="DirectConsumer1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.direct.DirectConsumer1" />
-      <module name="SGGRabbitMQ" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itguigu.rabbitmq.direct.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Application.TopicConsumer2">
     <configuration name="DirectConsumer2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.direct.DirectConsumer2" />
       <module name="SGGRabbitMQ" />
@@ -164,12 +158,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FanOutConsumer1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.fanout.FanOutConsumer1" />
+    <configuration name="TopicConsumer1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.topic.TopicConsumer1" />
       <module name="SGGRabbitMQ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itguigu.rabbitmq.fanout.*" />
+          <option name="PATTERN" value="com.itguigu.rabbitmq.topic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -177,12 +171,25 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FanOutConsumer2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.fanout.FanOutConsumer2" />
+    <configuration name="TopicConsumer2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.topic.TopicConsumer2" />
       <module name="SGGRabbitMQ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itguigu.rabbitmq.fanout.*" />
+          <option name="PATTERN" value="com.itguigu.rabbitmq.topic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TopicProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.topic.TopicProducer" />
+      <module name="SGGRabbitMQ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itguigu.rabbitmq.topic.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -353,20 +360,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.DirectConsumer1" />
       <item itemvalue="Application.DirectConsumer2" />
       <item itemvalue="Application.DirectProducer" />
-      <item itemvalue="Application.FanOutConsumer1" />
-      <item itemvalue="Application.FanOutConsumer2" />
+      <item itemvalue="Application.TopicConsumer1" />
+      <item itemvalue="Application.TopicConsumer2" />
+      <item itemvalue="Application.TopicProducer" />
       <item itemvalue="Tomcat Server.Tomcat8" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.TopicConsumer2" />
+        <item itemvalue="Application.TopicConsumer1" />
+        <item itemvalue="Application.TopicProducer" />
         <item itemvalue="Application.DirectConsumer2" />
-        <item itemvalue="Application.DirectConsumer1" />
         <item itemvalue="Application.DirectProducer" />
-        <item itemvalue="Application.FanOutConsumer2" />
-        <item itemvalue="Application.FanOutConsumer1" />
       </list>
     </recent_temporary>
   </component>
@@ -414,7 +421,7 @@
       <workItem from="1678881109900" duration="682000" />
       <workItem from="1678933022167" duration="1210000" />
       <workItem from="1679028663275" duration="6620000" />
-      <workItem from="1679096296444" duration="18057000" />
+      <workItem from="1679096296444" duration="30288000" />
     </task>
     <task id="LOCAL-00001" summary="新搭的环境提交试试">
       <created>1647078933243</created>
@@ -493,7 +500,70 @@
       <option name="project" value="LOCAL" />
       <updated>1679114652677</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="44-修改删除交换机名称和队列名称">
+      <created>1679115344730</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1679115344730</updated>
+    </task>
+    <task id="LOCAL-00013" summary="45-简单模式自动应答">
+      <created>1679132704425</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1679132704425</updated>
+    </task>
+    <task id="LOCAL-00014" summary="45-简单扇出模式自动应答">
+      <created>1679132894697</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1679132894697</updated>
+    </task>
+    <task id="LOCAL-00015" summary="45-直接模式自动应答">
+      <created>1679133302157</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1679133302157</updated>
+    </task>
+    <task id="LOCAL-00016" summary="添加注释">
+      <created>1679133509627</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1679133509627</updated>
+    </task>
+    <task id="LOCAL-00017" summary="简单模式创建队列抽出公用方法">
+      <created>1679135115069</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1679135115069</updated>
+    </task>
+    <task id="LOCAL-00018" summary="扇出模式抽出创建队列和绑定的方法">
+      <created>1679135408162</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1679135408162</updated>
+    </task>
+    <task id="LOCAL-00019" summary="添加预取值的注释">
+      <created>1679137475269</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1679137475269</updated>
+    </task>
+    <task id="LOCAL-00020" summary="抽取创建队列的代码到公共类里">
+      <created>1679137693941</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1679137693941</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -573,7 +643,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="新搭的环境提交试试" />
-    <MESSAGE value="添加注释" />
     <MESSAGE value="格式化注释" />
     <MESSAGE value="修改目录" />
     <MESSAGE value="30-不公平分发" />
@@ -583,7 +652,16 @@
     <MESSAGE value="43-fanout模式" />
     <MESSAGE value="43-删除测试类" />
     <MESSAGE value="44-直接模式" />
-    <option name="LAST_COMMIT_MESSAGE" value="44-直接模式" />
+    <MESSAGE value="44-修改删除交换机名称和队列名称" />
+    <MESSAGE value="45-简单模式自动应答" />
+    <MESSAGE value="45-简单扇出模式自动应答" />
+    <MESSAGE value="45-直接模式自动应答" />
+    <MESSAGE value="添加注释" />
+    <MESSAGE value="简单模式创建队列抽出公用方法" />
+    <MESSAGE value="扇出模式抽出创建队列和绑定的方法" />
+    <MESSAGE value="添加预取值的注释" />
+    <MESSAGE value="抽取创建队列的代码到公共类里" />
+    <option name="LAST_COMMIT_MESSAGE" value="抽取创建队列的代码到公共类里" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/com/itgu/AppTest.java">
