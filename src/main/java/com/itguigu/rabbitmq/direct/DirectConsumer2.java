@@ -25,16 +25,6 @@ public class DirectConsumer2 {
         logger.info("DirectConsumer2 begin...");
         Channel channel = RabbitmqUtils.channel;
 
-        // 创建队列
-        channel.queueDeclare(RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME2,
-                true, false, false, null);
-
-        // 绑定队列
-        channel.queueBind(
-                RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME2,
-                RabbitmqUtils.DIRECT_EXCHANGE_NAME,
-                RabbitmqUtils.DIRECT_EXCHANGE_ROUTING_KEY2);
-
         // deliverCallback 传递回调
         DeliverCallback deliverCallback = (consumerTag, message) -> {
             logger.info("DirectConsumer2 deliverCallback message:{}", new String(message.getBody()));

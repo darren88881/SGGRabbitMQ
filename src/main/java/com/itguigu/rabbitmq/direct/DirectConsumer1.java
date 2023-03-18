@@ -27,15 +27,6 @@ public class DirectConsumer1 {
         // 获取信道
         Channel channel = RabbitmqUtils.channel;
 
-        // 创建队列
-        channel.queueDeclare(RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME1,
-                true, false, false, null);
-        // 队列和信道绑定,并指定routingKey
-        channel.queueBind(
-                RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME1,
-                RabbitmqUtils.DIRECT_EXCHANGE_NAME,
-                RabbitmqUtils.DIRECT_EXCHANGE_ROUTING_KEY1);
-
         // deliverCallback 传递回调
         DeliverCallback deliverCallback = (consumerTag, message) -> {
             logger.info("DirectConsumer1 deliverCallback message:{}", new String(message.getBody()));
