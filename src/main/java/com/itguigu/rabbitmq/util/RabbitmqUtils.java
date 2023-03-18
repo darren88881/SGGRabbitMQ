@@ -18,7 +18,7 @@ public class RabbitmqUtils {
     private static Logger   logger          = LoggerFactory.getLogger(RabbitmqUtils.class);
     public  static String   EXCHANGE_NAME   = "fanout_exchange";
     public  static String   QUEUE_NAME      = "hello";
-    public  static Integer  MESSAGE_NUM     = 100;
+    public  static Integer  MESSAGE_NUM     = 10;
     /**
      * 队列持久化
      */

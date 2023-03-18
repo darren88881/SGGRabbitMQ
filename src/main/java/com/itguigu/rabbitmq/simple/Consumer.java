@@ -4,6 +4,8 @@ import com.itguigu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.CancelCallback;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.DeliverCallback;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
@@ -13,19 +15,21 @@ import java.util.concurrent.TimeoutException;
  * @create 2021-11-06 17:51
  */
 public class Consumer {
+
+    private static Logger logger = LoggerFactory.getLogger(Consumer.class);
     
     public static void main(String [] args) throws IOException, TimeoutException {
         Channel channel = RabbitmqUtils.getChannel();
 
-        System.out.println("等待接收消息");
+        logger.info("等待接收消息");
         //推送的消息如何进行消费的接口回调
         DeliverCallback deliverCallback = (consumerTag, message) ->{
-            System.out.println(new String(message.getBody()));
+            logger.info(new String(message.getBody()));
             RabbitmqUtils.closeChannel();
         };
 
         CancelCallback cancelCallback = (consumerTag) -> {
-            System.out.println(consumerTag + "消息被中断");
+            logger.info(consumerTag + "消息被中断");
         };
 
         /**
@@ -36,7 +40,5 @@ public class Consumer {
          * 4.消费者未成功消费的回调
          */
         channel.basicConsume(RabbitmqUtils.QUEUE_NAME, true, deliverCallback, cancelCallback);
-
-
     }
 }

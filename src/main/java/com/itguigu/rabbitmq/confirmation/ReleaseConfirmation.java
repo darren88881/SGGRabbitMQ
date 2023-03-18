@@ -3,6 +3,7 @@ package com.itguigu.rabbitmq.confirmation;
 import com.itguigu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.Channel;
 import com.rabbitmq.client.ConfirmCallback;
+import com.rabbitmq.client.MessageProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,7 +24,7 @@ public class ReleaseConfirmation {
 
     public static void main(String [] args) throws InterruptedException, TimeoutException, IOException {
         // 单个发布确认模式:发布1000个消息耗时：555ms
-        publishMessageIndividual();
+        // publishMessageIndividual();
         // 批量发布确认模式:发布1000个消息耗时：66ms
         // publishMessageBatch();
         // 异步发布确认模式:发布1000个消息耗时：28ms
@@ -136,7 +137,8 @@ public class ReleaseConfirmation {
 
         for (int i = 0; i < RabbitmqUtils.MESSAGE_NUM; i++) {
             String message = i+"";
-            channel.basicPublish("", RabbitmqUtils.QUEUE_NAME, null, message.getBytes());
+            channel.basicPublish("", RabbitmqUtils.QUEUE_NAME,
+                    MessageProperties.PERSISTENT_TEXT_PLAIN, message.getBytes());
             // 将消息放入并发跳跃表中
             skipListMap.put(Long.parseLong(String.valueOf(i)), message);
         }

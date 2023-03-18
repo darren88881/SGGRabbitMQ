@@ -2,6 +2,8 @@ package com.itguigu.rabbitmq.simple;
 
 import com.itguigu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.Channel;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.concurrent.TimeoutException;
@@ -13,6 +15,8 @@ import java.util.concurrent.TimeoutException;
  * @create 2021-11-06 17:13
  */
 public class Producer {
+
+    private static Logger logger = LoggerFactory.getLogger(Producer.class);
 
     public static void main(String[] args) throws IOException, TimeoutException {
 
@@ -42,8 +46,6 @@ public class Producer {
          */
         channel.basicPublish("", RabbitmqUtils.QUEUE_NAME, null, message.getBytes());
 
-        System.out.println("消息发送中。。。。");
-
-
+        logger.info("消息发送中。。。。");
     }
 }
