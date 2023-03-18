@@ -22,7 +22,7 @@ public class DirectConsumer2 {
     private static Logger logger = LoggerFactory.getLogger(DirectConsumer2.class);
 
     public static void main(String [] args) throws IOException, TimeoutException {
-        logger.info("FanOutConsumer2 begin...");
+        logger.info("DirectConsumer2 begin...");
         Channel channel = RabbitmqUtils.channel;
 
         channel.queueDeclare(RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME2,
@@ -35,14 +35,15 @@ public class DirectConsumer2 {
 
         // deliverCallback 传递回调
         DeliverCallback deliverCallback = (consumerTag, message) -> {
-            logger.info("FanOutConsumer2 deliverCallback message:{}", new String(message.getBody()));
+            logger.info("DirectConsumer2 deliverCallback message:{}", new String(message.getBody()));
         };
 
         // cancelCallback 取消回调
         CancelCallback cancelCallback = (consumerTag) -> {
-            logger.info("FanOutConsumer2 cancelCallback consumerTag:{}", consumerTag);
+            logger.info("DirectConsumer2 cancelCallback consumerTag:{}", consumerTag);
         };
 
-        channel.basicConsume(RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME2, deliverCallback, cancelCallback);
+        channel.basicConsume(RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME2, true,
+                deliverCallback, cancelCallback);
     }
 }

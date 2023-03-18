@@ -46,7 +46,8 @@ public class DirectConsumer1 {
             logger.info("DirectConsumer1 cancelCallback consumerTag:{}", consumerTag);
         };
 
-        channel.basicConsume(RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME1, deliverCallback, cancelCallback);
+        channel.basicConsume(RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME1, true,
+                deliverCallback, cancelCallback);
 
 
     }

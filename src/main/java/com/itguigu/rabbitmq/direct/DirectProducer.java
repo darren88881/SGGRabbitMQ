@@ -38,7 +38,7 @@ public class DirectProducer {
              */
             channel.basicPublish(
                     RabbitmqUtils.DIRECT_EXCHANGE_NAME,
-                    RabbitmqUtils.DIRECT_EXCHANGE_ROUTING_KEY1,
+                    RabbitmqUtils.DIRECT_EXCHANGE_ROUTING_KEY2,
                     MessageProperties.TEXT_PLAIN,
                     message.getBytes());
             logger.info("message :" + message);
