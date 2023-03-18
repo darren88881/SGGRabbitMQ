@@ -39,6 +39,7 @@ public class FanOutConsumer2 {
             logger.info("FanOutConsumer2 cancelCallback consumerTag:{}", consumerTag);
         };
 
-        channel.basicConsume(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME2, deliverCallback, cancelCallback);
+        channel.basicConsume(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME2, true,
+                deliverCallback, cancelCallback);
     }
 }
