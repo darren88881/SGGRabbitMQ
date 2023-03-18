@@ -21,7 +21,7 @@ public class Producer {
     public static void main(String[] args) throws IOException, TimeoutException {
 
         // 获取信道
-        Channel channel = RabbitmqUtils.getChannel();
+        Channel channel = RabbitmqUtils.channel;
 
         /**
          * 生成一个队列

@@ -19,7 +19,7 @@ public class Consumer {
     private static Logger logger = LoggerFactory.getLogger(Consumer.class);
     
     public static void main(String [] args) throws IOException, TimeoutException {
-        Channel channel = RabbitmqUtils.getChannel();
+        Channel channel = RabbitmqUtils.channel;
 
         logger.info("等待接收消息");
         //推送的消息如何进行消费的接口回调

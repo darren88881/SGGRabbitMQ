@@ -17,13 +17,13 @@ import java.util.concurrent.TimeoutException;
  * @author darren
  * @create 2021-11-15 21:21
  */
-public class ProducerFanOut {
+public class FanOutProducer {
 
-    private static Logger logger = LoggerFactory.getLogger(ProducerFanOut.class);
+    private static Logger logger = LoggerFactory.getLogger(FanOutProducer.class);
 
     public static void main(String [] args) throws IOException, TimeoutException {
         logger.info("fanout begin...");
-        Channel channel = RabbitmqUtils.getFanOutExchangeChannel();
+        Channel channel = RabbitmqUtils.createFanOutExchangeChannel();
 
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {

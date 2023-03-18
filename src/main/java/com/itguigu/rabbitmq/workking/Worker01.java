@@ -21,7 +21,7 @@ public class Worker01 {
 
     public static void main(String[] args) throws IOException, TimeoutException {
         logger.info("Worker01 start accept message... ");
-        Channel channel = RabbitmqUtils.getChannel();
+        Channel channel = RabbitmqUtils.channel;
 
         // 设置不公平分发或预取值。0为公平分发，1为不公平分发，大于1为预取值
         channel.basicQos(2);

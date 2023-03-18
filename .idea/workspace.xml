@@ -5,14 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="037a1667-838c-4833-a368-6f576bb5602f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/itguigu/StaticClass.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/confirmation/ReleaseConfirmation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/confirmation/ReleaseConfirmation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/fanout/FanOutConsumer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/fanout/FanOutConsumer1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/fanout/FanOutConsumer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/fanout/FanOutConsumer2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/fanout/ProducerFanOut.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/fanout/FanOutProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/simple/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/simple/Consumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/simple/Producer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/simple/Producer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/util/RabbitmqUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/util/RabbitmqUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Producer01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Producer01.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Worker01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Worker01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/logback.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/com/itgu/AppTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/com/itgu/AppTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Worker02.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/workking/Worker02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/itgu/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/itguigu/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/com/itgu/AppTest.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +34,13 @@
   </component>
   <component name="ComposerSettings">
     <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -121,7 +134,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.Consumer">
+  <component name="RunManager" selected="Application.FanOutConsumer2">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.simple.Consumer" />
       <module name="SGGRabbitMQ" />
@@ -135,51 +148,51 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="FanOutConsumer1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.fanout.FanOutConsumer1" />
+      <module name="SGGRabbitMQ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itguigu.rabbitmq.fanout.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FanOutConsumer2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.fanout.FanOutConsumer2" />
+      <module name="SGGRabbitMQ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itguigu.rabbitmq.fanout.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="FanOutProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.fanout.FanOutProducer" />
+      <module name="SGGRabbitMQ" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.itguigu.rabbitmq.fanout.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Producer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.simple.Producer" />
       <module name="SGGRabbitMQ" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.itguigu.rabbitmq.simple.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Producer01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.workking.Producer01" />
-      <module name="SGGRabbitMQ" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itguigu.rabbitmq.workking.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ReleaseConfirmation" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.confirmation.ReleaseConfirmation" />
-      <module name="SGGRabbitMQ" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itguigu.rabbitmq.confirmation.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Worker01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.workking.Worker01" />
-      <module name="SGGRabbitMQ" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.itguigu.rabbitmq.workking.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -350,20 +363,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.ReleaseConfirmation" />
-      <item itemvalue="Application.Producer01" />
-      <item itemvalue="Application.Worker01" />
+      <item itemvalue="Application.FanOutConsumer1" />
+      <item itemvalue="Application.FanOutConsumer2" />
+      <item itemvalue="Application.FanOutProducer" />
       <item itemvalue="Application.Consumer" />
       <item itemvalue="Application.Producer" />
       <item itemvalue="Tomcat Server.Tomcat8" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Consumer" />
+        <item itemvalue="Application.FanOutConsumer2" />
+        <item itemvalue="Application.FanOutConsumer1" />
+        <item itemvalue="Application.FanOutProducer" />
         <item itemvalue="Application.Producer" />
-        <item itemvalue="Application.ReleaseConfirmation" />
-        <item itemvalue="Application.Worker01" />
-        <item itemvalue="Application.Producer01" />
+        <item itemvalue="Application.Consumer" />
       </list>
     </recent_temporary>
   </component>
@@ -411,7 +424,7 @@
       <workItem from="1678881109900" duration="682000" />
       <workItem from="1678933022167" duration="1210000" />
       <workItem from="1679028663275" duration="6620000" />
-      <workItem from="1679096296444" duration="9914000" />
+      <workItem from="1679096296444" duration="14966000" />
     </task>
     <task id="LOCAL-00001" summary="新搭的环境提交试试">
       <created>1647078933243</created>
@@ -462,7 +475,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679104847389</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="38-日志输出">
+      <created>1679106914242</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1679106914242</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -548,7 +568,8 @@
     <MESSAGE value="30-不公平分发" />
     <MESSAGE value="31-预取值" />
     <MESSAGE value="38-批量发布确认" />
-    <option name="LAST_COMMIT_MESSAGE" value="38-批量发布确认" />
+    <MESSAGE value="38-日志输出" />
+    <option name="LAST_COMMIT_MESSAGE" value="38-日志输出" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/com/itgu/AppTest.java">

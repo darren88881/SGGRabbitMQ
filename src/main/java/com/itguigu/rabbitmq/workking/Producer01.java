@@ -21,7 +21,7 @@ public class Producer01 {
 
     public static void main(String[] args) throws IOException, TimeoutException {
         logger.info("Producer send message begin...");
-        Channel channel = RabbitmqUtils.getChannel();
+        Channel channel = RabbitmqUtils.channel;
 
         channel.queueDeclare(RabbitmqUtils.QUEUE_NAME, RabbitmqUtils.DURABLE, false, false, null);
 
