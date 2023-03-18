@@ -25,9 +25,9 @@ public class FanOutConsumer2 {
         logger.info("FanOutConsumer2 begin...");
         Channel channel = RabbitmqUtils.channel;
 
-        channel.queueDeclare(RabbitmqUtils.EXCHANGE_QUEUE_NAME2, true, false, false, null);
+        channel.queueDeclare(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME2, true, false, false, null);
 
-        channel.queueBind(RabbitmqUtils.EXCHANGE_QUEUE_NAME2, RabbitmqUtils.EXCHANGE_NAME, "");
+        channel.queueBind(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME2, RabbitmqUtils.FANOUT_EXCHANGE_NAME, "");
 
         // deliverCallback 传递回调
         DeliverCallback deliverCallback = (consumerTag, message) -> {
@@ -39,6 +39,6 @@ public class FanOutConsumer2 {
             logger.info("FanOutConsumer2 cancelCallback consumerTag:{}", consumerTag);
         };
 
-        channel.basicConsume(RabbitmqUtils.EXCHANGE_QUEUE_NAME2, deliverCallback, cancelCallback);
+        channel.basicConsume(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME2, deliverCallback, cancelCallback);
     }
 }

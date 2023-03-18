@@ -28,9 +28,9 @@ public class FanOutConsumer1 {
         Channel channel = RabbitmqUtils.channel;
 
         // 创建队列
-        channel.queueDeclare(RabbitmqUtils.EXCHANGE_QUEUE_NAME1, true, false, false, null);
+        channel.queueDeclare(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME1, true, false, false, null);
         // 队列和信道绑定
-        channel.queueBind(RabbitmqUtils.EXCHANGE_QUEUE_NAME1, RabbitmqUtils.EXCHANGE_NAME, "");
+        channel.queueBind(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME1, RabbitmqUtils.FANOUT_EXCHANGE_NAME, "");
 
         // deliverCallback 传递回调
         DeliverCallback deliverCallback = (consumerTag, message) -> {
@@ -42,7 +42,7 @@ public class FanOutConsumer1 {
             logger.info("FanOutConsumer1 cancelCallback consumerTag:{}", consumerTag);
         };
 
-        channel.basicConsume(RabbitmqUtils.EXCHANGE_QUEUE_NAME1, deliverCallback, cancelCallback);
+        channel.basicConsume(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME1, deliverCallback, cancelCallback);
 
 
     }

@@ -36,7 +36,7 @@ public class FanOutProducer {
              *      PERSISTENT_TEXT_PLAIN   ：持久纯文本
              * byte[] body                  ：消息体
              */
-            channel.basicPublish(RabbitmqUtils.EXCHANGE_NAME, "", MessageProperties.TEXT_PLAIN, message.getBytes());
+            channel.basicPublish(RabbitmqUtils.FANOUT_EXCHANGE_NAME, "", MessageProperties.TEXT_PLAIN, message.getBytes());
             logger.info("message :" + message);
         }
     }

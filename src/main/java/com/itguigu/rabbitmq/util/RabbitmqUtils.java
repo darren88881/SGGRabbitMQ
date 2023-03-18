@@ -18,9 +18,9 @@ public class RabbitmqUtils {
     private static Logger   logger          = LoggerFactory.getLogger(RabbitmqUtils.class);
     public  static String   QUEUE_NAME      = "hello";
 
-    public  static String   EXCHANGE_NAME                 = "fanout_exchange";
-    public  static String   EXCHANGE_QUEUE_NAME1          = "fanout_exchange_queue1";
-    public  static String   EXCHANGE_QUEUE_NAME2          = "fanout_exchange_queue2";
+    public  static String   FANOUT_EXCHANGE_NAME                 = "fanout_exchange";
+    public  static String   FANOUT_EXCHANGE_QUEUE_NAME1          = "fanout_exchange_queue1";
+    public  static String   FANOUT_EXCHANGE_QUEUE_NAME2          = "fanout_exchange_queue2";
 
     public  static String   DIRECT_EXCHANGE_NAME          = "direct_exchange";
     public  static String   DIRECT_EXCHANGE_ROUTING_KEY1  = "direct_routing_key_1";
@@ -87,13 +87,13 @@ public class RabbitmqUtils {
     public static Channel createFanOutExchangeChannel() throws IOException {
 
         // 删除名为 fanout_exchange 的交换机
-        channel.exchangeDelete(RabbitmqUtils.EXCHANGE_NAME);
+        channel.exchangeDelete(RabbitmqUtils.FANOUT_EXCHANGE_NAME);
         /**
          * exchange: 交换机名称,
          * BuiltinExchangeType：交换机类型,
          * durable: 持久化交换机
          */
-        channel.exchangeDeclare(RabbitmqUtils.EXCHANGE_NAME, BuiltinExchangeType.FANOUT, true);
+        channel.exchangeDeclare(RabbitmqUtils.FANOUT_EXCHANGE_NAME, BuiltinExchangeType.FANOUT, true);
         logger.info("创建扇出交换机成功");
         return channel;
     }
