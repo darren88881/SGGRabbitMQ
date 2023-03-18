@@ -20,6 +20,7 @@ public class Consumer {
     private static Logger logger = LoggerFactory.getLogger(Consumer.class);
     
     public static void main(String [] args) throws IOException, TimeoutException {
+        // 获取信道
         Channel channel = RabbitmqUtils.channel;
 
         logger.info("等待接收消息");
@@ -29,6 +30,7 @@ public class Consumer {
             RabbitmqUtils.closeChannel();
         };
 
+        // cancelCallback 取消回调
         CancelCallback cancelCallback = (consumerTag) -> {
             logger.info(consumerTag + "消息被中断");
         };
