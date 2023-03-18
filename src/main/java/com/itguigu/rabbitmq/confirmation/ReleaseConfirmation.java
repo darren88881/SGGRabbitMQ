@@ -27,7 +27,7 @@ public class ReleaseConfirmation {
         // 批量发布确认模式:发布1000个消息耗时：66ms
         // publishMessageBatch();
         // 异步发布确认模式:发布1000个消息耗时：28ms
-        // publishMessageAync();
+         publishMessageAync();
 
 
     }
@@ -138,7 +138,7 @@ public class ReleaseConfirmation {
             String message = i+"";
             channel.basicPublish("", RabbitmqUtils.QUEUE_NAME, null, message.getBytes());
             // 将消息放入并发跳跃表中
-            skipListMap.put(channel.getNextPublishSeqNo(), message);
+            skipListMap.put(Long.parseLong(String.valueOf(i)), message);
         }
 
         long end = System.currentTimeMillis();

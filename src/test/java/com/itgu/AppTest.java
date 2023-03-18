@@ -4,6 +4,9 @@ import org.junit.Test;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.concurrent.ConcurrentNavigableMap;
+import java.util.concurrent.ConcurrentSkipListMap;
+
 
 /**
  * 新搭的环境提交试试
@@ -24,5 +27,18 @@ public class AppTest {
         logger.info("INFO");
         logger.debug("DEBUG");
         logger.trace("TRACE");
+    }
+
+    @Test
+    public void testConcurrentSkipListMap(){
+        ConcurrentSkipListMap concurrentSkipListMap = new ConcurrentSkipListMap<String,String>();
+        for (int i=0;i< 10; i++) {
+            concurrentSkipListMap.put(i+"",i+"");
+        }
+        System.out.println(concurrentSkipListMap.toString());
+
+        ConcurrentNavigableMap concurrentNavigableMap = concurrentSkipListMap.headMap(5+"", true);
+
+        System.out.println(concurrentNavigableMap.toString());
     }
 }

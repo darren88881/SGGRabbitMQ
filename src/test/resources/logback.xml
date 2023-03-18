@@ -207,7 +207,7 @@ debug="false" debug如果设置为true，表示我们会打印出来logback自�
         日志优先级别标准顺序为：
         ALL < TRACE < DEBUG < INFO < WARN < ERROR < FATAL < OFF
     -->
-    <logger name="com.itgu" level="DEBUG" additivity="true">
+    <logger name="com.itguigu" level="DEBUG" additivity="true">
         <appender-ref ref="errorAppender"/>
         <appender-ref ref="warnAppender"/>
         <appender-ref ref="infoAppender"/>
@@ -215,7 +215,7 @@ debug="false" debug如果设置为true，表示我们会打印出来logback自�
     </logger>
 
     <!--根日志记录器，所有包下面的日志都会被记录-->
-    <root level="DEBUG">
-        <appender-ref ref="consoleAppender"/>
+    <root level="OFF">
+       <!-- <appender-ref ref="consoleAppender"/>-->
     </root>
 </configuration>
