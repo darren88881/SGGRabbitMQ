@@ -23,10 +23,13 @@ public class FanOutConsumer2 {
 
     public static void main(String [] args) throws IOException, TimeoutException {
         logger.info("FanOutConsumer2 begin...");
+        // 获取信道
         Channel channel = RabbitmqUtils.channel;
 
+        // 创建队列
         channel.queueDeclare(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME2, true, false, false, null);
 
+        // 绑定队列
         channel.queueBind(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME2, RabbitmqUtils.FANOUT_EXCHANGE_NAME, "");
 
         // deliverCallback 传递回调
@@ -39,6 +42,14 @@ public class FanOutConsumer2 {
             logger.info("FanOutConsumer2 cancelCallback consumerTag:{}", consumerTag);
         };
 
+        /**
+         * 消费者消费消息
+         *
+         * 1.消费哪个队列
+         * 2.消费成功之后是否要自动应答 true 代表自动应答 false 手动应答
+         * 3.消费者成功消费回的调
+         * 4.消费者未成功消费的回调
+         */
         channel.basicConsume(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME2, true,
                 deliverCallback, cancelCallback);
     }

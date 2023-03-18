@@ -29,6 +29,8 @@ public class FanOutProducer {
         while (scanner.hasNext()) {
             String message = scanner.next();
             /**
+             * 发送消息
+             *
              * String exchange              : 交换机名称
              * String routingKey            ：路由密钥
              * BasicProperties props        ：消息配置
@@ -36,7 +38,8 @@ public class FanOutProducer {
              *      PERSISTENT_TEXT_PLAIN   ：持久纯文本
              * byte[] body                  ：消息体
              */
-            channel.basicPublish(RabbitmqUtils.FANOUT_EXCHANGE_NAME, "", MessageProperties.TEXT_PLAIN, message.getBytes());
+            channel.basicPublish(RabbitmqUtils.FANOUT_EXCHANGE_NAME, "",
+                    MessageProperties.TEXT_PLAIN, message.getBytes());
             logger.info("message :" + message);
         }
     }

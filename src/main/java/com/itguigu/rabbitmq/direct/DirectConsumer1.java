@@ -46,6 +46,14 @@ public class DirectConsumer1 {
             logger.info("DirectConsumer1 cancelCallback consumerTag:{}", consumerTag);
         };
 
+        /**
+         * 消费者消费消息
+         *
+         * 1.消费哪个队列
+         * 2.消费成功之后是否要自动应答 true 代表自动应答 false 手动应答
+         * 3.消费者成功消费回的调
+         * 4.消费者未成功消费的回调
+         */
         channel.basicConsume(RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME1, true,
                 deliverCallback, cancelCallback);
 

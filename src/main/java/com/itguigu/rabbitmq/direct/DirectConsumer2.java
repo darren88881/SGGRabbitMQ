@@ -25,9 +25,11 @@ public class DirectConsumer2 {
         logger.info("DirectConsumer2 begin...");
         Channel channel = RabbitmqUtils.channel;
 
+        // 创建队列
         channel.queueDeclare(RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME2,
                 true, false, false, null);
 
+        // 绑定队列
         channel.queueBind(
                 RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME2,
                 RabbitmqUtils.DIRECT_EXCHANGE_NAME,
@@ -43,6 +45,14 @@ public class DirectConsumer2 {
             logger.info("DirectConsumer2 cancelCallback consumerTag:{}", consumerTag);
         };
 
+        /**
+         * 消费者消费消息
+         *
+         * 1.消费哪个队列
+         * 2.消费成功之后是否要自动应答 true 代表自动应答 false 手动应答
+         * 3.消费者成功消费回的调
+         * 4.消费者未成功消费的回调
+         */
         channel.basicConsume(RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME2, true,
                 deliverCallback, cancelCallback);
     }

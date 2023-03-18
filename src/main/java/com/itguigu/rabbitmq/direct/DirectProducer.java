@@ -29,6 +29,8 @@ public class DirectProducer {
         while (scanner.hasNext()) {
             String message = scanner.next();
             /**
+             * 发送消息
+             *
              * String exchange              : 交换机名称
              * String routingKey            ：路由密钥
              * BasicProperties props        ：消息配置
