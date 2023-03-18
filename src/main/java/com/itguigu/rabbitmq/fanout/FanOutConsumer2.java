@@ -26,12 +26,6 @@ public class FanOutConsumer2 {
         // 获取信道
         Channel channel = RabbitmqUtils.channel;
 
-        // 创建队列
-        channel.queueDeclare(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME2, true, false, false, null);
-
-        // 绑定队列
-        channel.queueBind(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME2, RabbitmqUtils.FANOUT_EXCHANGE_NAME, "");
-
         // deliverCallback 传递回调
         DeliverCallback deliverCallback = (consumerTag, message) -> {
             logger.info("FanOutConsumer2 deliverCallback message:{}", new String(message.getBody()));

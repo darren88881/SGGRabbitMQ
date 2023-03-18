@@ -23,7 +23,7 @@ public class FanOutProducer {
 
     public static void main(String [] args) throws IOException, TimeoutException {
         logger.info("fanout begin...");
-        Channel channel = RabbitmqUtils.createFanOutExchangeChannel();
+        Channel channel = RabbitmqUtils.createFanOutExchangeAndQueue();
 
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
