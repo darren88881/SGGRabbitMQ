@@ -1,4 +1,4 @@
-package com.itguigu.rabbitmq.fanout;
+package com.itguigu.rabbitmq.simple.fanout;
 
 import com.itguigu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.Channel;

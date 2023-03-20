@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="037a1667-838c-4833-a368-6f576bb5602f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/dead/DeadConsumer1.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/dead/DeadConsumer2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/dead/DeadProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/simple/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/simple/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/fanout/FanOutConsumer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/simple/fanout/FanOutConsumer1.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/fanout/FanOutConsumer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/simple/fanout/FanOutConsumer2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/fanout/FanOutProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/simple/fanout/FanOutProducer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/util/RabbitmqUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/util/RabbitmqUtils.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -127,8 +132,11 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\IDEA-workspace-darren\SGGRabbitMQ\src\main\java\com\itguigu\rabbitmq\direct" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.itguigu.rabbitmq.dead" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Consumer">
+  <component name="RunManager" selected="Application.DeadConsumer2">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.simple.Consumer" />
       <module name="SGGRabbitMQ" />
@@ -142,12 +150,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FanOutConsumer1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.fanout.FanOutConsumer1" />
+    <configuration name="DeadConsumer1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.dead.DeadConsumer1" />
       <module name="SGGRabbitMQ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itguigu.rabbitmq.fanout.*" />
+          <option name="PATTERN" value="com.itguigu.rabbitmq.dead.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -155,12 +163,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FanOutConsumer2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.fanout.FanOutConsumer2" />
+    <configuration name="DeadConsumer2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.dead.DeadConsumer2" />
       <module name="SGGRabbitMQ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itguigu.rabbitmq.fanout.*" />
+          <option name="PATTERN" value="com.itguigu.rabbitmq.dead.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -168,12 +176,12 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FanOutProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.fanout.FanOutProducer" />
+    <configuration name="DeadProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.dead.DeadProducer" />
       <module name="SGGRabbitMQ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itguigu.rabbitmq.fanout.*" />
+          <option name="PATTERN" value="com.itguigu.rabbitmq.dead.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -358,19 +366,19 @@
     </configuration>
     <list>
       <item itemvalue="Application.Consumer" />
+      <item itemvalue="Application.DeadConsumer1" />
+      <item itemvalue="Application.DeadConsumer2" />
+      <item itemvalue="Application.DeadProducer" />
       <item itemvalue="Application.Producer" />
-      <item itemvalue="Application.FanOutConsumer1" />
-      <item itemvalue="Application.FanOutConsumer2" />
-      <item itemvalue="Application.FanOutProducer" />
       <item itemvalue="Tomcat Server.Tomcat8" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DeadConsumer2" />
+        <item itemvalue="Application.DeadConsumer1" />
+        <item itemvalue="Application.DeadProducer" />
         <item itemvalue="Application.Consumer" />
         <item itemvalue="Application.Producer" />
-        <item itemvalue="Application.FanOutConsumer2" />
-        <item itemvalue="Application.FanOutConsumer1" />
-        <item itemvalue="Application.FanOutProducer" />
       </list>
     </recent_temporary>
   </component>
@@ -419,7 +427,7 @@
       <workItem from="1678933022167" duration="1210000" />
       <workItem from="1679028663275" duration="6620000" />
       <workItem from="1679096296444" duration="32773000" />
-      <workItem from="1679290773858" duration="2239000" />
+      <workItem from="1679290773858" duration="11130000" />
     </task>
     <task id="LOCAL-00001" summary="新搭的环境提交试试">
       <created>1647078933243</created>
@@ -575,7 +583,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679138893693</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="简单模式取消关闭信道，优化创建队列工具类">
+      <created>1679293174006</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1679293174006</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -675,7 +690,8 @@
     <MESSAGE value="抽取创建队列的代码到公共类里" />
     <MESSAGE value="48-Topic 主题模式" />
     <MESSAGE value="5大模式详细描述" />
-    <option name="LAST_COMMIT_MESSAGE" value="5大模式详细描述" />
+    <MESSAGE value="简单模式取消关闭信道，优化创建队列工具类" />
+    <option name="LAST_COMMIT_MESSAGE" value="简单模式取消关闭信道，优化创建队列工具类" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

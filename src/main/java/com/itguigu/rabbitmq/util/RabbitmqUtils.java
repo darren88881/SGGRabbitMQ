@@ -8,6 +8,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
+import java.util.HashMap;
 import java.util.concurrent.TimeoutException;
 
 /**
@@ -32,15 +33,17 @@ public class RabbitmqUtils {
     public  static String   TOPIC_EXCHANGE_NAME          = "topic_exchange";
     public  static String   TOPIC_EXCHANGE_QUEUE_NAME1   = "topic_exchange_queue1";
     public  static String   TOPIC_EXCHANGE_QUEUE_NAME2   = "topic_exchange_queue2";
-    public  static String   TOPIC_EXCHANGE_ROUTING_KEY1  = "topic_routing_key_1";
-    public  static String   TOPIC_EXCHANGE_ROUTING_KEY2  = "topic_routing_key_2";
 
-
+    // 死信相关队列
+    public  static String   NORMAL_EXCHANGE_NAME        = "normal_exchange";
+    public  static String   NORMAL_EXCHANGE_ROUTING_KEY = "normal_routing_key";
+    public  static String   NORMAL_EXCHANGE_QUEUE_NAME  = "normal_queue";
+    public  static String   DEAD_EXCHANGE_NAME          = "dead_exchange";
+    public  static String   DEAD_EXCHANGE_QUEUE_NAME    = "dead_queue";
+    public  static String   DEAD_EXCHANGE_ROUTING_KEY   = "dead_routing_key";
 
     public  static Integer  MESSAGE_NUM     = 10;
-    /**
-     * 队列持久化
-     */
+    // 队列持久化
     public static boolean   DURABLE = true;
     public static Connection connection;
     public static Channel   channel;
@@ -195,7 +198,10 @@ public class RabbitmqUtils {
         // 删除交换机
         channel.exchangeDelete(RabbitmqUtils.TOPIC_EXCHANGE_NAME);
         // 创建交换机
-        channel.exchangeDeclare(RabbitmqUtils.TOPIC_EXCHANGE_NAME, BuiltinExchangeType.TOPIC, true);
+        channel.exchangeDeclare(
+                RabbitmqUtils.TOPIC_EXCHANGE_NAME,
+                BuiltinExchangeType.TOPIC,
+                RabbitmqUtils.DURABLE);
 
         // 创建队列1
         channel.queueDeclare(RabbitmqUtils.TOPIC_EXCHANGE_QUEUE_NAME1,
@@ -217,6 +223,61 @@ public class RabbitmqUtils {
                 RabbitmqUtils.TOPIC_EXCHANGE_QUEUE_NAME2,
                 RabbitmqUtils.TOPIC_EXCHANGE_NAME, "lazy.#");
         logger.info("创建主题交换机成功");
+        return channel;
+    }
+
+    /**
+     * 死信队列实战
+     *
+     * @return
+     * @throws IOException
+     */
+    public static Channel createDeadExchangeAndQueue() throws IOException {
+        // 删除已存在的交换机
+        channel.exchangeDelete(RabbitmqUtils.NORMAL_EXCHANGE_NAME);
+        channel.exchangeDelete(RabbitmqUtils.DEAD_EXCHANGE_NAME);
+        // 删除已存在的队列
+        channel.queueDelete(RabbitmqUtils.NORMAL_EXCHANGE_QUEUE_NAME);
+        channel.queueDelete(RabbitmqUtils.DEAD_EXCHANGE_QUEUE_NAME);
+
+        // 创建普通交换机
+        channel.exchangeDeclare(
+                RabbitmqUtils.NORMAL_EXCHANGE_NAME,
+                BuiltinExchangeType.DIRECT,
+                RabbitmqUtils.DURABLE);
+        // 正常队列绑定死信队列信息并设置队列的长度
+        HashMap<String, Object> arguments = new HashMap<>();
+        arguments.put("x-dead-letter-exchange",RabbitmqUtils.DEAD_EXCHANGE_NAME);
+        arguments.put("x-dead-letter-routing-key",RabbitmqUtils.DEAD_EXCHANGE_ROUTING_KEY);
+        arguments.put("x-max-length",6);
+
+        // 创建普通队列
+        channel.queueDeclare(
+                RabbitmqUtils.NORMAL_EXCHANGE_QUEUE_NAME,
+                RabbitmqUtils.DURABLE,
+                false,false,arguments);
+        // 将不同队列绑定到普通交换机上
+        channel.queueBind(
+                RabbitmqUtils.NORMAL_EXCHANGE_QUEUE_NAME,
+                RabbitmqUtils.NORMAL_EXCHANGE_NAME,
+                RabbitmqUtils.NORMAL_EXCHANGE_ROUTING_KEY);
+
+
+        // 创建死信交换机
+        channel.exchangeDeclare(
+                RabbitmqUtils.DEAD_EXCHANGE_NAME,
+                BuiltinExchangeType.DIRECT,
+                RabbitmqUtils.DURABLE);
+        // 创建死信队列
+        channel.queueDeclare(
+                RabbitmqUtils.DEAD_EXCHANGE_QUEUE_NAME,
+                RabbitmqUtils.DURABLE,
+                false,false,null);
+        // 将死信队列绑定到交换机上
+        channel.queueBind(
+                RabbitmqUtils.DEAD_EXCHANGE_QUEUE_NAME,
+                RabbitmqUtils.DEAD_EXCHANGE_NAME,
+                RabbitmqUtils.DEAD_EXCHANGE_ROUTING_KEY);
         return channel;
     }
 }
