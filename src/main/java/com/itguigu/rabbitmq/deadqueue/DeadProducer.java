@@ -1,4 +1,4 @@
-package com.itguigu.rabbitmq.dead;
+package com.itguigu.rabbitmq.deadqueue;
 
 import com.itguigu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.AMQP;
@@ -13,8 +13,8 @@ import java.io.IOException;
  *
  *  业务：
  *  发10条消息，到固定长度的普通队列，普通队列长度为6
- *      将第10（info8）个消息设置一个过期时间，过期后自动进入死信队列，
- *      将第9（info9）个消息拒绝,拒绝后进入死信队列。
+ *      将第9（info8）个消息设置一个过期时间，到达消息头部过期后自动进入死信队列，
+ *      将第10（info9）个消息拒绝,拒绝后进入死信队列。
  *  最终：
  *     死信队列：983210
  *     普通队列：7654

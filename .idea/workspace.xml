@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="037a1667-838c-4833-a368-6f576bb5602f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/dead/DeadConsumer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/deadqueue/DeadConsumer2.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/dead/DeadProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/deadqueue/DeadProducer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/dead/OrdinaryConsumer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/deadqueue/OrdinaryConsumer1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +132,7 @@
       <recent name="com.itguigu.rabbitmq.dead" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DeadConsumer2">
+  <component name="RunManager" selected="Application.DeadProducer">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.simple.Consumer" />
       <module name="SGGRabbitMQ" />
@@ -144,11 +147,11 @@
       </method>
     </configuration>
     <configuration name="DeadConsumer2" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.dead.DeadConsumer2" />
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.deadqueue.DeadConsumer2" />
       <module name="SGGRabbitMQ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itguigu.rabbitmq.dead.*" />
+          <option name="PATTERN" value="com.itguigu.rabbitmq.deadqueue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -157,11 +160,11 @@
       </method>
     </configuration>
     <configuration name="DeadProducer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.dead.DeadProducer" />
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.deadqueue.DeadProducer" />
       <module name="SGGRabbitMQ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itguigu.rabbitmq.dead.*" />
+          <option name="PATTERN" value="com.itguigu.rabbitmq.deadqueue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -170,11 +173,11 @@
       </method>
     </configuration>
     <configuration name="OrdinaryConsumer1" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.dead.OrdinaryConsumer1" />
+      <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.deadqueue.OrdinaryConsumer1" />
       <module name="SGGRabbitMQ" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.itguigu.rabbitmq.dead.*" />
+          <option name="PATTERN" value="com.itguigu.rabbitmq.deadqueue.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -367,9 +370,9 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DeadProducer" />
         <item itemvalue="Application.DeadConsumer2" />
         <item itemvalue="Application.OrdinaryConsumer1" />
-        <item itemvalue="Application.DeadProducer" />
         <item itemvalue="Application.Consumer" />
         <item itemvalue="Application.Producer" />
       </list>
@@ -420,7 +423,7 @@
       <workItem from="1678933022167" duration="1210000" />
       <workItem from="1679028663275" duration="6620000" />
       <workItem from="1679096296444" duration="32773000" />
-      <workItem from="1679290773858" duration="12598000" />
+      <workItem from="1679290773858" duration="14361000" />
     </task>
     <task id="LOCAL-00001" summary="新搭的环境提交试试">
       <created>1647078933243</created>
@@ -590,7 +593,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679303372964</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="重命名普通消费这类名">
+      <created>1679304636432</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1679304636432</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -692,7 +702,8 @@
     <MESSAGE value="5大模式详细描述" />
     <MESSAGE value="简单模式取消关闭信道，优化创建队列工具类" />
     <MESSAGE value="死信队列" />
-    <option name="LAST_COMMIT_MESSAGE" value="死信队列" />
+    <MESSAGE value="重命名普通消费这类名" />
+    <option name="LAST_COMMIT_MESSAGE" value="重命名普通消费这类名" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

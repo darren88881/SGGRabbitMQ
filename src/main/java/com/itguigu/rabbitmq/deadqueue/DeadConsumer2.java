@@ -1,4 +1,4 @@
-package com.itguigu.rabbitmq.dead;
+package com.itguigu.rabbitmq.deadqueue;
 
 import com.itguigu.rabbitmq.util.RabbitmqUtils;
 import com.rabbitmq.client.CancelCallback;
