@@ -14,9 +14,9 @@ import java.io.IOException;
  * @Author darren
  * @Date 2023/3/20 14:22
  */
-public class DeadConsumer1 {
+public class OrdinaryConsumer1 {
 
-    private static Logger logger = LoggerFactory.getLogger(DeadConsumer1.class);
+    private static Logger logger = LoggerFactory.getLogger(OrdinaryConsumer1.class);
 
     public static void main(String[] args) throws IOException {
         Channel channel = RabbitmqUtils.channel;
