@@ -27,7 +27,6 @@ public class Consumer {
         //推送的消息如何进行消费的接口回调
         DeliverCallback deliverCallback = (consumerTag, message) ->{
             logger.info(new String(message.getBody()));
-            RabbitmqUtils.closeChannel();
         };
 
         // cancelCallback 取消回调

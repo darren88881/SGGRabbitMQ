@@ -97,10 +97,10 @@ public class RabbitmqUtils {
          * 1.queue:     队列名称
          * 2.durable:   队列里面的消息是否持久化 默认消息存储在内存中
          * 3.exclusive: 该队列是否只供一个消费者进行消费 是否进行共享 true 可以多个消费者消费
-         * 4.autoDelete:是否自动删除 最后一个消费者端开连接以后 该队列是否自动删除 true 自动删除
+         * 4.autoDelete:是否自动删除 最后一个消费者断开连接以后 该队列是否自动删除 true 自动删除
          * 5.arguments: 其他参数
          */
-        channel.queueDeclare(RabbitmqUtils.QUEUE_NAME, true, false, false, null);
+        channel.queueDeclare(RabbitmqUtils.QUEUE_NAME, RabbitmqUtils.DURABLE, false, false, null);
         return channel;
     }
 
@@ -134,12 +134,13 @@ public class RabbitmqUtils {
         channel.exchangeDeclare(RabbitmqUtils.FANOUT_EXCHANGE_NAME, BuiltinExchangeType.FANOUT, true);
 
         // 创建队列1
-        channel.queueDeclare(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME1, true, false, false, null);
+        channel.queueDeclare(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME1, RabbitmqUtils.DURABLE, false,
+                false, null);
         // 队列1和交换机绑定
         channel.queueBind(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME1, RabbitmqUtils.FANOUT_EXCHANGE_NAME, "");
 
         // 创建队列2
-        channel.queueDeclare(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME2, true, false, false, null);
+        channel.queueDeclare(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME2, RabbitmqUtils.DURABLE, false, false, null);
         // 队列2和交换机绑定
         channel.queueBind(RabbitmqUtils.FANOUT_EXCHANGE_QUEUE_NAME2, RabbitmqUtils.FANOUT_EXCHANGE_NAME, "");
 
@@ -166,7 +167,7 @@ public class RabbitmqUtils {
 
         // 创建队列1
         channel.queueDeclare(RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME1,
-                true, false, false, null);
+                RabbitmqUtils.DURABLE, false, false, null);
         // 队列1和信道绑定,并指定routingKey
         channel.queueBind(
                 RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME1,
@@ -175,7 +176,7 @@ public class RabbitmqUtils {
 
         // 创建队列2
         channel.queueDeclare(RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME2,
-                true, false, false, null);
+                RabbitmqUtils.DURABLE, false, false, null);
         // 队列2和信道绑定,并指定routingKey
         channel.queueBind(
                 RabbitmqUtils.DIRECT_EXCHANGE_QUEUE_NAME2,
@@ -198,7 +199,7 @@ public class RabbitmqUtils {
 
         // 创建队列1
         channel.queueDeclare(RabbitmqUtils.TOPIC_EXCHANGE_QUEUE_NAME1,
-                true, false,false,null);
+                RabbitmqUtils.DURABLE, false,false,null);
         // 绑定队列1并设置routingKey
         channel.queueBind(
                 RabbitmqUtils.TOPIC_EXCHANGE_QUEUE_NAME1,
@@ -206,7 +207,7 @@ public class RabbitmqUtils {
 
         // 创建队列2
         channel.queueDeclare(RabbitmqUtils.TOPIC_EXCHANGE_QUEUE_NAME2,
-                true, false,false,null);
+                RabbitmqUtils.DURABLE, false,false,null);
         // 绑定队列2到交换机上并设置routingKey
         channel.queueBind(
                 RabbitmqUtils.TOPIC_EXCHANGE_QUEUE_NAME2,
