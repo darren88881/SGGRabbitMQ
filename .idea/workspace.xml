@@ -6,9 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="037a1667-838c-4833-a368-6f576bb5602f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/dead/DeadConsumer2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/deadqueue/DeadConsumer2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/dead/DeadProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/deadqueue/DeadProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/dead/OrdinaryConsumer1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/deadqueue/OrdinaryConsumer1.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,7 +114,7 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;jdk.selected.JAVA_MODULE&quot;: &quot;1.8&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/IDEA-workspace-darren/SGGRabbitMQ/src/main/java/com/itguigu/rabbitmq/direct&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/IDEA-workspace-darren/SGGRabbitMQ&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Artifacts&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
@@ -132,7 +129,7 @@
       <recent name="com.itguigu.rabbitmq.dead" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.DeadProducer">
+  <component name="RunManager" selected="Application.DeadConsumer2">
     <configuration name="Consumer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.itguigu.rabbitmq.simple.Consumer" />
       <module name="SGGRabbitMQ" />
@@ -370,9 +367,9 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.DeadProducer" />
         <item itemvalue="Application.DeadConsumer2" />
         <item itemvalue="Application.OrdinaryConsumer1" />
+        <item itemvalue="Application.DeadProducer" />
         <item itemvalue="Application.Consumer" />
         <item itemvalue="Application.Producer" />
       </list>
@@ -424,6 +421,13 @@
       <workItem from="1679028663275" duration="6620000" />
       <workItem from="1679096296444" duration="32773000" />
       <workItem from="1679290773858" duration="14361000" />
+      <workItem from="1679307231298" duration="364000" />
+      <workItem from="1679364507830" duration="51000" />
+      <workItem from="1679365017652" duration="1377000" />
+      <workItem from="1679393516878" duration="874000" />
+      <workItem from="1679410981583" duration="1317000" />
+      <workItem from="1679563317273" duration="1249000" />
+      <workItem from="1679588778693" duration="994000" />
     </task>
     <task id="LOCAL-00001" summary="新搭的环境提交试试">
       <created>1647078933243</created>
@@ -701,9 +705,9 @@
     <MESSAGE value="48-Topic 主题模式" />
     <MESSAGE value="5大模式详细描述" />
     <MESSAGE value="简单模式取消关闭信道，优化创建队列工具类" />
-    <MESSAGE value="死信队列" />
     <MESSAGE value="重命名普通消费这类名" />
-    <option name="LAST_COMMIT_MESSAGE" value="重命名普通消费这类名" />
+    <MESSAGE value="死信队列" />
+    <option name="LAST_COMMIT_MESSAGE" value="死信队列" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

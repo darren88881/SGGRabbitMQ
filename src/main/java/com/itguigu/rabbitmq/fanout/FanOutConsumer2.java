@@ -1,4 +1,4 @@
-package com.itguigu.rabbitmq.simple.fanout;
+package com.itguigu.rabbitmq.fanout;
 
 
 import com.itguigu.rabbitmq.util.RabbitmqUtils;
