@@ -6,6 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="037a1667-838c-4833-a368-6f576bb5602f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/confirmation/ReleaseConfirmation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/itguigu/rabbitmq/confirmation/ReleaseConfirmation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logback.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/logback.xsd" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +43,9 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="PATH_TO_GIT" value="D:\Development\Git\Git\bin\git.exe" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -107,20 +111,13 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "1.8",
-    "last_opened_file_path": "E:/IDEA-workspace-darren/SpringBoot-RabbitMQ",
-    "project.structure.last.edited": "Artifacts",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager"
-  }
-}]]></component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\IDEA-workspace-darren\SGGRabbitMQ\src\main\java\com\itguigu\rabbitmq\direct" />
@@ -198,7 +195,7 @@
     <configuration name="Tomcat8" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat8" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="C:/Program Files/Java/jdk1.8.0_161" nameIsGenerated="true">
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
-        <file path="%IDEA_RUN:TOMCAT_HOME%/webapps/ROOT">
+        <file path="$APPLICATION_HOME_DIR$/jbr/bin/%IDEA_RUN:TOMCAT_HOME%/webapps/ROOT">
           <settings>
             <option name="CONTEXT_PATH" value="/" />
           </settings>
@@ -428,7 +425,9 @@
       <workItem from="1679410981583" duration="1317000" />
       <workItem from="1679563317273" duration="1249000" />
       <workItem from="1679588778693" duration="6613000" />
-      <workItem from="1679661048735" duration="1366000" />
+      <workItem from="1679661048735" duration="2062000" />
+      <workItem from="1679680737765" duration="57000" />
+      <workItem from="1679680809068" duration="77000" />
     </task>
     <task id="LOCAL-00001" summary="新搭的环境提交试试">
       <created>1647078933243</created>
@@ -612,7 +611,14 @@
       <option name="project" value="LOCAL" />
       <updated>1679592604259</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="总结">
+      <created>1679665128913</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1679665128913</updated>
+    </task>
+    <option name="localTasksCounter" value="28" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -691,7 +697,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="新搭的环境提交试试" />
     <MESSAGE value="格式化注释" />
     <MESSAGE value="修改目录" />
     <MESSAGE value="30-不公平分发" />
@@ -716,7 +721,8 @@
     <MESSAGE value="重命名普通消费这类名" />
     <MESSAGE value="死信队列" />
     <MESSAGE value="修改路径错误" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改路径错误" />
+    <MESSAGE value="总结" />
+    <option name="LAST_COMMIT_MESSAGE" value="总结" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
