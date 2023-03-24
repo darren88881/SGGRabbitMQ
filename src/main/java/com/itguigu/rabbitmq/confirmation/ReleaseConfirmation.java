@@ -29,7 +29,6 @@ public class ReleaseConfirmation {
         // publishMessageBatch();
         // 异步发布确认模式:发布1000个消息耗时：28ms
          publishMessageAync();
-        // 萨尔访问
 
     }
 
